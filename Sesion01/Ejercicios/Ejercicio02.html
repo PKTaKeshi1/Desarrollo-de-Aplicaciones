@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2 - Formulario de Registro</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input:focus {
+      border-color: #ff9800;
+      outline: none;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+      display: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background: #ff9800;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #e68900;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="registroForm" novalidate>
+    <h1>Registro</h1>
+
+    <!-- Nombre -->
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="50" placeholder="Ej: Juan Pérez">
+    <span class="error" id="errorNombre">El nombre debe tener entre 3 y 50 caracteres.</span>
+
+    <!-- Correo -->
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required placeholder="Ej: usuario@email.com">
+    <span class="error" id="errorEmail">Introduce un correo electrónico válido.</span>
+
+    <!-- Contraseña -->
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required minlength="6" maxlength="20"
+           pattern="^(?=.*[A-Z])(?=.*[0-9]).{6,20}$"
+           placeholder="Mínimo 6 caracteres, con una mayúscula y un número">
+    <span class="error" id="errorPassword">La contraseña debe tener entre 6 y 20 caracteres, incluir una mayúscula y un número.</span>
+
+    <!-- Teléfono -->
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required pattern="^\+51\d{9}$" placeholder="+51987654321">
+    <span class="error" id="errorTelefono">Introduce un teléfono válido en formato +51 seguido de 9 dígitos.</span>
+
+    <!-- Botón -->
+    <button type="submit">Registrarse</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('registroForm');
+
+    form.addEventListener('submit', function(event) {
+      let valido = true;
+
+      // Validar nombre
+      const nombre = document.getElementById('nombre');
+      const errorNombre = document.getElementById('errorNombre');
+      if (!nombre.checkValidity()) {
+        errorNombre.style.display = 'block';
+        valido = false;
+      } else {
+        errorNombre.style.display = 'none';
+      }
+
+      // Validar correo
+      const email = document.getElementById('email');
+      const errorEmail = document.getElementById('errorEmail');
+      if (!email.checkValidity()) {
+        errorEmail.style.display = 'block';
+        valido = false;
+      } else {
+        errorEmail.style.display = 'none';
+      }
+
+      // Validar contraseña
+      const password = document.getElementById('password');
+      const errorPassword = document.getElementById('errorPassword');
+      if (!password.checkValidity()) {
+        errorPassword.style.display = 'block';
+        valido = false;
+      } else {
+        errorPassword.style.display = 'none';
+      }
+
+      // Validar teléfono
+      const telefono = document.getElementById('telefono');
+      const errorTelefono = document.getElementById('errorTelefono');
+      if (!telefono.checkValidity()) {
+        errorTelefono.style.display = 'block';
+        valido = false;
+      } else {
+        errorTelefono.style.display = 'none';
+      }
+
+      if (!valido) {
+        event.preventDefault();
+      }
+    });
+  </script>
+
+</body>
+</html>

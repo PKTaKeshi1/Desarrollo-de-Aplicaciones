@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio del Equipo</title>
+
+    <!-- Metadata SEO -->
+    <meta name="description" content="Portafolio grupal con la presentación de 3 integrantes, sus habilidades, experiencia y proyectos destacados.">
+    <meta name="keywords" content="portafolio, equipo, desarrollo web, HTML5, CSS3, proyectos">
+    <meta name="author" content="Equipo de Desarrollo">
+
+    <!-- Estilos CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #f4f4f9;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff9800;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ff9800;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        article {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        article img {
+            width: 150px;
+            border-radius: 50%;
+            float: left;
+            margin-right: 20px;
+        }
+
+        article h3 {
+            margin-top: 0;
+        }
+
+        aside a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        aside a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Accesibilidad */
+        a:focus {
+            outline: 2px dashed #ff9800;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header>
+        <h1>Portafolio del Equipo</h1>
+        <nav>
+            <a href="#persona1">Persona 1</a>
+            <a href="#persona2">Persona 2</a>
+            <a href="#persona3">Persona 3</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Persona 1 -->
+        <section id="persona1">
+            <h2>Persona 1 - Jhonatan Corrales</h2>
+            <article class="clearfix">
+                <h3>Sobre mí</h3>
+                <p>Soy desarrollador frontend con experiencia en HTML, CSS y JavaScript. Me apasiona el diseño web responsivo y la accesibilidad.</p>
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>HTML5, CSS3, JavaScript</li>
+                    <li>Bootstrap, React</li>
+                    <li>Git y GitHub</li>
+                </ul>
+                <h3>Experiencia</h3>
+                <p>Desarrollador Frontend en XYZ Tech (2022 - Actualidad).</p>
+                <h3>Proyectos</h3>
+                <aside>
+                    <a href="https://github.com/Alexander1909">Landing Page - Startup</a>
+                    <a href="https://github.com/Alexander1909">Sistema de reservas</a>
+                </aside>
+            </article>
+        </section>
+
+        <!-- Persona 2 -->
+        <section id="persona2">
+            <h2>Persona 2 - Edwin Herrera</h2>
+            <article class="clearfix">
+                <h3>Sobre mí</h3>
+                <p>Ingeniero de software con enfoque en backend. Me gusta crear sistemas escalables y optimizados.</p>
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>Python, Java, Node.js</li>
+                    <li>APIs REST, MySQL, MongoDB</li>
+                    <li>Docker y despliegue en la nube</li>
+                </ul>
+                <h3>Experiencia</h3>
+                <p>Backend Developer en ABC Solutions (2021 - Actualidad).</p>
+                <h3>Proyectos</h3>
+                <aside>
+                    <a href="https://github.com/PKTaKeshi1">API de e-commerce</a>
+                    <a href="https://github.com/PKTaKeshi1">Gestor de inventario</a>
+                </aside>
+            </article>
+        </section>
+
+        <!-- Persona 3 -->
+        <section id="persona3">
+            <h2>Persona 3 - Cristian Rodriguez</h2>
+            <article class="clearfix">
+                <h3>Sobre mí</h3>
+                <p>Especialista en UX/UI con pasión por la creación de interfaces intuitivas y accesibles.</p>
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>Diseño UI/UX</li>
+                    <li>Figma, Adobe XD</li>
+                    <li>HTML y CSS para prototipos</li>
+                </ul>
+                <h3>Experiencia</h3>
+                <p>Diseñador UX/UI en Creativa Studio (2020 - Actualidad).</p>
+                <h3>Proyectos</h3>
+                <aside>
+                    <a href="https://github.com/CristhR">Rediseño de aplicación móvil</a>
+                    <a href="https://github.com/CristhR">Dashboard administrativo</a>
+                </aside>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Portafolio del Equipo - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
