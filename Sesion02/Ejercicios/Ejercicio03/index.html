@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCSM - Universidad Católica de Santa María</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="images/ucsm-logo.png" alt="Logo UCSM" class="logo">
+    <nav>
+      <ul>
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#programs">Programas</a></li>
+        <li><a href="#campus">Campus</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h1>Universidad Católica de Santa María</h1>
+      <p>La UCSM es una de las universidades más prestigiosas del sur del Perú, con una amplia oferta académica, investigación y compromiso social.</p>
+    </section>
+
+    <section id="programs" class="grid">
+      <div class="card">
+        <h2>Ingeniería</h2>
+        <p>Programas de Ingeniería de Sistemas, Civil, Industrial, entre otros.</p>
+      </div>
+      <div class="card">
+        <h2>Derecho</h2>
+        <p>Formación integral en ciencias jurídicas con enfoque humanista.</p>
+      </div>
+      <div class="card">
+        <h2>Salud</h2>
+        <p>Medicina, Enfermería y Odontología con infraestructura moderna.</p>
+      </div>
+    </section>
+
+    <section id="campus">
+      <h2>Nuestro Campus</h2>
+      <img src="images/campus.jpg" alt="Campus UCSM" width="1000" height="600" >
+      <p>El campus principal está ubicado en Arequipa y cuenta con áreas deportivas, bibliotecas y laboratorios de última generación.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contacto</h2>
+      <form>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" required>
+        
+        <label for="email">Correo:</label>
+        <input type="email" id="email" required>
+        
+        <label for="message">Mensaje:</label>
+        <textarea id="message" rows="5" required></textarea>
+        
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad Católica de Santa María</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+/* Selector por nombre */
+h1 {
+  color: darkred;
+  text-align: center;
+}
+
+/* Selector por ID */
+#main-title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+/* Selector por clase */
+.bio {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 5px solid crimson;
+}
+
+/* Selector de atributo */
+a[href*="career"] {
+  color: blue;
+}
+
+/* Pseudo-clase */
+nav ul li a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+/* Pseudo-elemento */
+p::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: darkgreen;
+}
+
+/* Combinado */
+header nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}

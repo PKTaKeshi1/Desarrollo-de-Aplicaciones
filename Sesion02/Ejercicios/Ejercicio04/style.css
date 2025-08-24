@@ -1,0 +1,205 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Accesibilidad: tipografía y contraste base */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #222; /* texto más oscuro para contraste */
+  background-color: #fff;
+}
+
+/* Header con flexbox y contraste accesible */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #006400; /* verde oscuro para contraste */
+  padding: 10px 20px;
+  color: white;
+}
+
+header .logo {
+  width: 100px;
+  animation: fadeIn 2s ease-in-out; /* animación de entrada */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: yellow; /* alto contraste */
+  text-decoration: underline;
+}
+
+/* Titulares accesibles */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Secciones */
+main {
+  padding: 20px;
+}
+
+#about {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Cards con animación hover */
+#programs .card {
+  background: #f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#programs .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* Campus */
+#campus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* Centra la imagen y el texto */
+  text-align: center;    /* Centra el texto */
+  margin: 30px 0;
+}
+
+#campus img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+#campus img:hover,
+#campus img:focus {
+  transform: scale(1.05); /* zoom suave */
+}
+
+/* Contacto */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* Centra el formulario */
+  text-align: center;
+  margin: 30px 0;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Formulario accesible */
+form input, form textarea {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #006400; /* verde UCSM */
+  background-color: #f0fff0; /* fondo accesible */
+}
+
+form button {
+  background: darkred;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover,
+form button:focus {
+  background: crimson;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #333;
+  color: white;
+  margin-top: 20px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    width: 100%;
+  }
+}
