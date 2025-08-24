@@ -1,0 +1,3 @@
+body { color: black; font-family: Arial; }
+p { color: inherit; }
+#especial { color: red !important; }

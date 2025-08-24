@@ -1,0 +1,5 @@
+a:hover { color: red; }
+a:visited { color: purple; }
+p:first-child { font-weight: bold; }
+li:last-child { color: blue; }
+input:focus { background: yellow; }

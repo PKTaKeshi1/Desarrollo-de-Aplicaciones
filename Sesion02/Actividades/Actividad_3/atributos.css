@@ -1,0 +1,3 @@
+a[href^="https"] { color: green; }
+a[href$=".org"] { color: blue; }
+input[required] { border:2px solid red; }
