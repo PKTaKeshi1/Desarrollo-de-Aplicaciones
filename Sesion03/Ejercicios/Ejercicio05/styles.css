@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Estilo general de las tarjetas */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Colores de ejemplo */
+.card1 { background: #444; }
+.card2 { background: #222; }
+.card3 { background: #eee; color: #333; }
+.card4 { background: #e74c3c; }
+.card5 { background: #2ecc71; }
+.card6 { background: #3498db; }
+.card7 { background: #9b59b6; }
+
+/* Responsive: en pantallas pequeñas (celular) -> 1 columna */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}

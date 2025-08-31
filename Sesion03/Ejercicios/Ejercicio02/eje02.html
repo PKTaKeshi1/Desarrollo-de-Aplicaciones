@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3 - Tienda Responsive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">📷</div>
+      <button class="menu-toggle">☰</button>
+      <ul class="menu">
+        <li><a href="#">Cameras</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Cameras</h1>
+  </header>
+
+  <main class="grid-container">
+    <div class="product">
+      <img src="img/smartphone.jpg" alt="Smartphone">
+      <h2>Smartphone</h2>
+      <p>The best camera is the one you carry 24/7.</p>
+      <div class="product-info">
+        <span>Price: 450 €</span>
+        <span>In Stock</span>
+      </div>
+      <button class="btn">ADD TO CART</button>
+    </div>
+
+    <div class="product">
+    <img src="img/polaroid.jpeg" alt="Polaroid Camera">
+      <h2>Polaroid Camera</h2>
+      <p>Get hipstery effects.</p>
+      <div class="product-info">
+        <span>Price: 450 €</span>
+        <span>In Stock</span>
+      </div>
+      <button class="btn">ADD TO CART</button>
+    </div>
+
+    <div class="product">
+      <img src="img/gopro.png" alt="GoPro Hero 4 Silver">
+      <h2>GoPro Hero 4 Silver</h2>
+      <p>Perfect for sports and adventures.</p>
+      <div class="product-info">
+        <span>Price: 450 €</span>
+        <span>In Stock</span>
+      </div>
+      <button class="btn">ADD TO CART</button>
+    </div>
+  </main>
+
+  <script>
+    // Script menú hamburguesa
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    toggleBtn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>

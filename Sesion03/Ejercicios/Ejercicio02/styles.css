@@ -1,0 +1,104 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4b0082;
+  padding: 10px 20px;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Productos con Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.btn {
+  background: teal;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Breakpoint 900px */
+@media (max-width: 900px) {
+  .menu {
+    gap: 10px;
+  }
+}
+
+/* Breakpoint 480px */
+@media (max-width: 480px) {
+  .menu {
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    display: none;
+    padding: 10px;
+  }
+  .menu.open {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}

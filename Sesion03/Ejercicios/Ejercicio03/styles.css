@@ -1,0 +1,48 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 150px);
+  gap: 10px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.grid-item {
+  border: 2px solid black;
+}
+
+/* Posiciones según la imagen */
+.item1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.item2 {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+}
+
+.item3 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.item4 {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+
+.item5 {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+
+.item6 {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+.item7 {
+  grid-column: 2 / 5;
+  grid-row: 3 / 4;
+}
