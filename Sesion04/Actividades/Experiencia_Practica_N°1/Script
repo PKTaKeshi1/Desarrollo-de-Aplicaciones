@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 1 - Script Interno</title>
+</head>
+<body>
+  <h1>Código en Etiquetas Script</h1>
+  <p id="mensaje">Texto original.</p>
+  <button onclick="cambiarTexto()">Cambiar Texto</button>
+  <br><br>
+  <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+  <button onclick="mostrarSaludo()">Saludar</button>
+  <p id="saludo"></p>
+
+  <script>
+    function cambiarTexto() {
+      document.getElementById("mensaje").innerHTML = "Texto actualizado con JS interno.";
+    }
+
+    function mostrarSaludo() {
+      const nombre = document.getElementById("nombre").value;
+      document.getElementById("saludo").innerHTML = nombre.trim() !== ""
+        ? "Hola, " + nombre + "!"
+        : "Por favor, ingresa tu nombre.";
+    }
+  </script>
+</body>
+</html>
