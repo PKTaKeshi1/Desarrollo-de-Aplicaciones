@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Scope y console.log</title>
+</head>
+<body>
+  <h1>Verificación de Scope</h1>
+  <script>
+    let sinAsignar;
+    console.log("Valor sin asignar:", sinAsignar);
+
+    function externa() {
+      let varExterna = "Soy externa";
+
+      function interna() {
+        let varInterna = "Soy interna";
+        console.log(varExterna);
+        console.log(varInterna);
+      }
+
+      interna();
+      try {
+        console.log(varInterna);
+      } catch (error) {
+        console.log("Error: varInterna no accesible fuera de interna");
+      }
+    }
+
+    externa();
+  </script>
+</body>
+</html>
