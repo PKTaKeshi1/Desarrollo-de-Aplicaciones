@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Funciones de Primera Clase</title>
+  <script>
+    const foo = () => console.log("foobar");
+    foo();
+
+    function sayHello() {
+      return "Hello, ";
+    }
+
+    function greeting(helloMessage, name) {
+      console.log(helloMessage() + name);
+    }
+
+    greeting(sayHello, "JavaScript!");
+
+    function sayHello2() {
+      return () => console.log("Hello!");
+    }
+
+    const saludo = sayHello2();
+    saludo();
+  </script>
+</head>
+<body>
+  <h1>Ciudadano de Primera Clase</h1>
+</body>
+</html>
