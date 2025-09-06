@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Declaración de Código en Línea</title>
+</head>
+<body>
+    <header>
+        <h1>Práctica: Código JavaScript en Línea</h1>
+        <p>Ejemplo básico de JavaScript declarado directamente en un elemento HTML.</p>
+    </header>
+
+    <main>
+        <button onclick="alert('¡Hola! Has hecho clic en el botón')">
+            Haz clic aquí
+        </button>
+        <br><br>
+        <input type="text" placeholder="Escribe algo y presiona Enter"
+               onkeydown="if(event.key==='Enter'){alert('Texto ingresado: ' + this.value)}">
+    </main>
+    <footer>
+        <p>© 2025 Lenguajes de Programación III</p>
+    </footer>
+</body>
+</html>x
+
