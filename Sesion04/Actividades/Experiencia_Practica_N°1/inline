@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 1 - Código en Línea</title>
+</head>
+<body>
+  <h1>Código JavaScript en Línea</h1>
+  <button onclick="alert('¡Hola! Has hecho clic en el botón')">Haz clic aquí</button>
+  <br><br>
+  <input type="text" placeholder="Escribe algo y presiona Enter"
+         onkeydown="if(event.key==='Enter'){alert('Texto: ' + this.value)}">
+</body>
+</html>
