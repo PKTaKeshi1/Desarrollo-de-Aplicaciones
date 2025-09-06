@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Declaración de Código con Script</title>
+</head>
+<body>
+    <header>
+        <h1>Práctica: Código en Etiquetas Script</h1>
+    </header>
+    <main>
+        <p id="mensaje">Este texto será cambiado por JavaScript.</p>
+        <button onclick="cambiarTexto()">Cambiar Texto</button>
+        <br><br>
+        <label for="nombre">Ingresa tu nombre:</label>
+        <input type="text" id="nombre">
+        <button onclick="mostrarSaludo()">Saludar</button>
+        <p id="saludo"></p>
+    </main>
+    <footer>
+        <p>© 2025 Lenguajes de Programación III</p>
+    </footer>
+    <!-- Bloque de código JavaScript -->
+    <script>
+<script>
+        // Función que cambia el texto de un párrafo
+        function cambiarTexto() {
+            document.getElementById("mensaje").innerHTML = "¡Texto cambiado con JavaScript!";
+        }
+
+        // Función que muestra un saludo personalizado
+        function mostrarSaludo() {
+            let nombre = document.getElementById("nombre").value;
+            let saludo = document.getElementById("saludo");
+
+            if (nombre.trim() === "") {
+                saludo.innerHTML = "Por favor, ingresa tu nombre.";
+            } else {
+                saludo.innerHTML = "¡Hola, " + nombre + "! Bienvenido a la práctica.";
+            }
+        }
+    </script>
+</body>
+</html>
