@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Variables y Constantes</title>
+</head>
+<body>
+  <h1>Uso de Variables y Constantes</h1>
+  <script>
+    {
+      let variableBloque = "Variable con let";
+      const constanteBloque = "Constante dentro de bloque";
+
+      console.log(variableBloque);
+      console.log(constanteBloque);
+    }
+
+    try {
+      console.log(variableBloque);
+    } catch (error) {
+      console.log("Error: variableBloque no accesible fuera del bloque.");
+    }
+  </script>
+</body>
+</html>
