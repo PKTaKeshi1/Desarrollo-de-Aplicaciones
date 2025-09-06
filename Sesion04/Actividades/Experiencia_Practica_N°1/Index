@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 1 - Código Externo</title>
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>Código JavaScript en Archivo Externo</h1>
+  <p id="estado">Esperando interacción...</p>
+  <button onclick="mostrarEstado()">Mostrar Estado</button>
+  <br><br>
+  <input type="text" id="numero" placeholder="Ingresa un número">
+  <button onclick="validarNumero()">Validar</button>
+  <p id="resultado"></p>
+</body>
+</html>
