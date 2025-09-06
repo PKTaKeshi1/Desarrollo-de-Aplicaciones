@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoisting en JavaScript</title>
+</head>
+<body>
+  <h1>Demostración de Hoisting</h1>
+  <script>
+    console.log(x === undefined); // true
+    var x = 3;
+
+    var myvar = 'global value';
+
+    (function() {
+      console.log(myvar); // undefined por hoisting
+      var myvar = 'valor local';
+    })();
+  </script>
+</body>
+</html>
