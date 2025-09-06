@@ -1,0 +1,18 @@
+function mostrarEstado() {
+  document.getElementById("estado").innerHTML = "Estado actualizado mediante archivo externo.";
+}
+
+function validarNumero() {
+  const entrada = document.getElementById("numero").value;
+  const resultado = document.getElementById("resultado");
+
+  try {
+    if (entrada.trim() === "" || isNaN(entrada)) {
+      throw "Error: Ingresa un número válido.";
+    }
+    resultado.innerHTML = "Número ingresado correctamente: " + entrada;
+  } catch (error) {
+    resultado.innerHTML = error;
+  }
+}
+
