@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiencia 05 - Uso de Arrays</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Experiencia de Práctica N° 05: Uso de Arrays</h1>
+    <button id="ejecutar">Ejecutar</button>
+    <pre id="salida"></pre>
+
+    <script>
+    function ejecutar() {
+        let salida = [];
+
+      // 1) Creación de arrays
+      let numeros = [10, 20, 30];                  // Array literal
+      let frutas = new Array("Manzana", "Pera");   // Constructor Array
+      let alumnos = Array.of("Ana", "Luis", "Marta"); // Array.of()
+
+        salida.push("Array de números: " + numeros);
+        salida.push("Array de frutas: " + frutas);
+        salida.push("Array de alumnos: " + alumnos);
+
+      // 2) Métodos básicos
+      numeros.push(40);   // Agregar al final
+      frutas.unshift("Uva"); // Agregar al inicio
+      alumnos.pop();      // Eliminar último
+
+        salida.push("\nDespués de modificaciones:");
+        salida.push("Números (push): " + numeros);
+        salida.push("Frutas (unshift): " + frutas);
+        salida.push("Alumnos (pop): " + alumnos);
+
+      // 3) Iteradores
+        salida.push("\nRecorrido con forEach:");
+        numeros.forEach((n, i) => salida.push(`Pos ${i}: ${n}`));
+
+        salida.push("\nUso de map (cuadrados): " + numeros.map(n => n*n));
+        salida.push("Uso de filter (mayores de 20): " + numeros.filter(n => n>20));
+        salida.push("crz");
+
+        document.getElementById("salida").textContent = salida.join("\n");
+        console.clear();
+        console.log({numeros, frutas, alumnos});
+    }
+
+    document.getElementById("ejecutar").addEventListener("click", ejecutar);
+    </script>
+</body>
+</html>

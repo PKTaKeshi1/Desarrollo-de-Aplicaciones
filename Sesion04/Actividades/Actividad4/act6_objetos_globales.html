@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Experiencia 06 - Objetos Globales</title>
+    <meta charset="UTF-8">
+    <style>
+    body { font-family: Arial, sans-serif; }
+    pre { background: #f4f4f4; padding: 10px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Experiencia de Práctica N° 06: Uso de Objetos Globales</h1>
+    <button id="ejecutar">Ejecutar</button>
+    <pre id="salida"></pre>
+
+    <script>
+    function ejecutar() {
+        let salida = [];
+
+      // a) Objeto Window
+        salida.push("=== Objeto Window ===");
+        salida.push("Ancho ventana: " + window.innerWidth);
+        salida.push("Alto ventana: " + window.innerHeight);
+        salida.push("URL actual: " + window.location.href);
+
+      // b) Objeto Array
+        salida.push("\n=== Objeto Array ===");
+        let arr = [1,2,3];
+        salida.push("Array.isArray([1,2,3]): " + Array.isArray(arr));
+        salida.push("Array.from('ABC'): " + Array.from("ABC"));
+        salida.push("Método push: arr.push(4) => " + (arr.push(4), arr));
+        salida.push("Método map (x*2): " + arr.map(x => x*2));
+
+      // c) Objeto Number
+        salida.push("\n=== Objeto Number ===");
+        salida.push("MAX_VALUE: " + Number.MAX_VALUE);
+        salida.push("MIN_VALUE: " + Number.MIN_VALUE);
+        salida.push("Number.isInteger(42): " + Number.isInteger(42));
+        let n = 1234.567;
+        salida.push("n.toFixed(2): " + n.toFixed(2));
+        salida.push("n.toString(2): " + n.toString(2));
+        salida.push("crz");
+
+        document.getElementById("salida").textContent = salida.join("\n");
+        console.clear();
+        console.log({window, arr, Number});
+    }
+
+    document.getElementById("ejecutar").addEventListener("click", ejecutar);
+    </script>
+</body>
+</html>

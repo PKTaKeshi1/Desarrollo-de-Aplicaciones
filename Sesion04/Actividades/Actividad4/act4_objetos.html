@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiencia 04 - Uso de Objetos</title>
+    <style>
+    body { font-family: Arial, sans-serif; }
+    pre { background: #f4f4f4; padding: 10px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Experiencia de Práctica N° 04: Uso de Objetos</h1>
+    <button id="ejecutar">Ejecutar</button>
+    <pre id="salida"></pre>
+
+    <script>
+    function ejecutar() {
+        let salida = [];
+
+      // 1) Objeto con inicializador (literal)
+        let persona = {
+        nombre: "Ana",
+        edad: 22,
+        saludar: function() {
+            return `Hola, soy ${this.nombre}`;
+        }
+        };
+      // Agregar propiedades
+        persona.carrera = "Ingeniería de Sistemas";
+        persona["activo"] = true;
+        salida.push("Objeto literal:", JSON.stringify(persona, null, 2));
+        salida.push("Método saludar: " + persona.saludar());
+
+      // 2) Objeto con constructor
+        function Estudiante(nombre, ciclo) {
+        this.nombre = nombre;
+        this.ciclo = ciclo;
+        }
+        let estudiante1 = new Estudiante("Luis", 5);
+      // Agregar propiedades
+        estudiante1.escuela = "Sistemas";
+        estudiante1["estado"] = "Matriculado";
+        salida.push("\nObjeto con constructor:", JSON.stringify(estudiante1, null, 2));
+
+      // 3) Objeto con Object.create
+        let animalProto = {
+        hacerSonido: function() {
+            return `${this.tipo} hace un sonido.`;
+        }
+        };
+        let perro = Object.create(animalProto);
+        perro.tipo = "Perro";
+        perro.raza = "Labrador";
+        perro["edad"] = 3;
+        salida.push("\nObjeto con Object.create:", JSON.stringify(perro, null, 2));
+        salida.push("Método heredado: " + perro.hacerSonido());
+        salida.push("crz");
+
+      // Mostrar resultados
+        document.getElementById("salida").textContent = salida.join("\n");
+        console.clear();
+        console.log({persona, estudiante1, perro});
+    }
+
+    document.getElementById("ejecutar").addEventListener("click", ejecutar);
+    </script>
+</body>
+</html>
