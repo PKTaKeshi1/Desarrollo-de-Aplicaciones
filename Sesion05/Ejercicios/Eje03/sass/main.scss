@@ -1,0 +1,46 @@
+// Variables
+$primary: #007bff;
+$secondary: #6c757d;
+$light: #f8f9fa;
+$dark: #212529;
+$radius: 10px;
+
+// Mixins
+@mixin rounded($r: $radius) {
+  border-radius: $r;
+}
+
+@mixin shadow {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+// Base
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: $light;
+  color: $dark;
+}
+
+// Cards personalizadas
+.card {
+  @include shadow;
+  @include rounded;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  img {
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+// CTA
+section.bg-primary {
+  h2 {
+    font-weight: bold;
+  }
+}

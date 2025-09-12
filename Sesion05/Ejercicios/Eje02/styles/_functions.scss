@@ -1,0 +1,14 @@
+// 📉 Aclarar color
+@function lighten-color($color, $percent) {
+  @return lighten($color, $percent);
+}
+
+// 📈 Oscurecer color
+@function darken-color($color, $percent) {
+  @return darken($color, $percent);
+}
+
+// 📐 Escalar tamaños
+@function scale-size($size, $factor) {
+  @return $size * $factor;
+}

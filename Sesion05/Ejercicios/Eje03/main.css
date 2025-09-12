@@ -1,0 +1,102 @@
+/* main.css (resumen de los estilos Sass compilados) */
+
+/* Estilos generales del cuerpo */
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background: #f8f9fa;
+  color: #212529;
+}
+
+/* Estilos personalizados de la barra de navegación */
+.navbar-custom {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-custom .navbar-brand {
+  font-weight: 700;
+  color: #0d6efd; /* Azul */
+}
+
+.navbar-custom .nav-link {
+  color: #212529;
+  transition: color 0.25s ease-in-out;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #0d6efd;
+}
+
+/* Tarjeta de producto */
+.product-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.product-card .title {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.product-card .price {
+  color: #0d6efd;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.product-card .btn-add {
+  transition: transform 0.25s ease-in-out;
+}
+
+.product-card .btn-add:hover {
+  transform: translateY(-3px); /* efecto de levantar botón al pasar el mouse */
+}
+
+/* Detalle de producto - galería */
+.product-detail .gallery .thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.product-detail .gallery .thumb.active {
+  border-color: #0d6efd; /* azul al estar activa */
+}
+
+/* Tabla del carrito */
+.cart-table {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Sección de llamada a la acción */
+.cta {
+  background: #0d6efd;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .product-card img {
+    height: 180px;
+  }
+}

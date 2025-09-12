@@ -1,0 +1,14 @@
+@mixin rounded($r: $radius) {
+  border-radius: $r;
+}
+
+@mixin transition($props: all, $time: .25s, $ease: ease-in-out) {
+  transition: $props $time $ease;
+}
+
+@mixin card($padding: $spacer) {
+  background: #fff;
+  padding: $padding;
+  @include rounded();
+  box-shadow: $shadow-md;
+}

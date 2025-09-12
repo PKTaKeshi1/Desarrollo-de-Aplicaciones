@@ -1,0 +1,20 @@
+// 🌟 Sombra
+@mixin shadow($level: 1) {
+  @if $level == 1 {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  } @else if $level == 2 {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  } @else {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+}
+
+// 🔲 Bordes redondeados
+@mixin rounded($radius: $border-radius) {
+  border-radius: $radius;
+}
+
+// 🎬 Transición
+@mixin transition($props: all, $time: 0.3s, $ease: ease-in-out) {
+  transition: $props $time $ease;
+}

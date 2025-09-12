@@ -1,0 +1,32 @@
+// Botón
+.btn {
+  display: inline-block;
+  padding: $spacer-sm $spacer;
+  background: $color-primary;
+  color: white;
+  text-decoration: none;
+  @include rounded();
+  @include shadow(1);
+  @include transition();
+
+  &:hover {
+    background: darken-color($color-primary, 10%);
+  }
+}
+
+// Tarjeta
+.card {
+  background: white;
+  padding: $spacer;
+  margin: $spacer;
+  @include rounded();
+  @include shadow(2);
+
+  h3 {
+    margin-bottom: $spacer-sm;
+  }
+
+  p {
+    font-size: scale-size($font-size-base, 0.9);
+  }
+}
