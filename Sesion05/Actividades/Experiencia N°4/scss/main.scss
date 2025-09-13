@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+@import 'components';
+
+* { box-sizing: border-box; }
+body {
+  font-family: $font-sans;
+  font-size: $base-font-size;
+  color: $text;
+  background: $bg;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-primary {
+  @include btn($primary);
+}

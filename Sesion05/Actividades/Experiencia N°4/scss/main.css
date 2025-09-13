@@ -1,0 +1,43 @@
+header {
+  background: #fff;
+}
+
+#hero {
+  padding: 4rem 0;
+}
+#hero .lead {
+  font-size: 1.125rem;
+}
+#hero img {
+  border-radius: 0.5rem;
+}
+
+.card {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size: 16px;
+  color: #212529;
+  background: #f8f9fa;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  filter: brightness(0.95);
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,7 @@
+header { background: #fff; }
+#hero {
+  padding: px-to-rem(64) 0;
+  .lead { font-size: px-to-rem(18); }
+  img { border-radius: $radius; }
+}
+.card { border: none; border-radius: $radius; box-shadow: 0 6px 18px rgba(0,0,0,.06); }

@@ -1,0 +1,14 @@
+@mixin btn($bg, $color: #fff) {
+  background-color: $bg;
+  color: $color;
+  padding: .6rem 1.2rem;
+  border-radius: $radius;
+  display: inline-block;
+  text-decoration: none;
+  &:hover { filter: brightness(.95); }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm { @media (max-width: 576px) { @content; } }
+  @else if $breakpoint == md { @media (max-width: 768px) { @content; } }
+}
