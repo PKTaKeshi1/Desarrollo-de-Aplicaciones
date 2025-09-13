@@ -1,0 +1,118 @@
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+
+/* Base */
+* { box-sizing: border-box; }
+body {
+  font-family: $font-main;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.site-header {
+  background-color: $primary-color;
+  color: #fff;
+  @include center-flex;
+  padding: 1rem;
+  h1 { font-size: $header-font-size; margin: 0; }
+}
+
+/* Main */
+.main {
+  .container {
+    margin-top: 1rem;
+  }
+  .card { margin-bottom: 1rem; }
+}
+
+/* Botones personalizados */
+.btn-custom {
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  &:hover {
+    background-color: darken-color($primary-color, 10%);
+  }
+}
+
+/* Footer */
+.site-footer {
+  background-color: $secondary-color;
+  color: #fff;
+  @include center-flex;
+  padding: 1rem;
+  font-size: $footer-font-size;
+  margin-top: 2rem;
+}
+
+/* Ejemplo de anidamiento: estilos para formulario dentro del main */
+.main {
+  form {
+    .form-label { font-weight: 600; }
+    input.form-control { border-radius: 4px; }
+  }
+}
+// =========================
+// Variables de colores
+// =========================
+$color-primario: #007bff;
+$color-hover: darken($color-primario, 10%);
+$color-texto: #ffffff;
+
+// =========================
+// Estilos Navbar
+// =========================
+.navbar {
+  background-color: $color-primario;
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    color: $color-texto;
+    &:hover {
+      color: lighten($color-texto, 10%);
+    }
+  }
+
+  .nav-link {
+    color: $color-texto;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $color-hover;
+      border-radius: 5px;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: $color-primario;
+    border: none;
+
+    .dropdown-item {
+      color: $color-texto;
+      &:hover {
+        background-color: $color-hover;
+      }
+    }
+  }
+}
+
+// =========================
+// Animación para el dropdown
+// =========================
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-menu.show {
+  animation: dropdownFade 0.3s ease forwards;
+}
