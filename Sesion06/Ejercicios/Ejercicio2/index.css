@@ -1,0 +1,139 @@
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ===== Contenedor principal ===== */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Títulos ===== */
+h1 {
+  color: #007acc;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ===== Navegación ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #005b99;
+}
+
+/* ===== Tabla ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+thead {
+  background: #007acc;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #f1f7ff;
+  transition: 0.2s;
+}
+
+/* ===== Botones ===== */
+button,
+input[type="button"] {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover,
+input[type="button"]:hover {
+  background: #005b99;
+  transform: scale(1.05);
+}
+
+/* ===== Formularios ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+form input[type="text"]:focus {
+  border: 1px solid #007acc;
+  box-shadow: 0px 0px 6px rgba(0, 122, 204, 0.4);
+}
+
+/* ===== API Section ===== */
+.api-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f1f7ff;
+  border-left: 5px solid #007acc;
+  border-radius: 8px;
+}
+
+.api-section h2 {
+  margin-bottom: 10px;
+  color: #005b99;
+}
+
+.api-section ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
