@@ -1,0 +1,75 @@
+import reflex as rx
+# ---------- Datos de ejemplo ----------
+todas_las_tareas = [
+    {"titulo": "Configurar servidor", "estado": "Pendiente"},
+    {"titulo": "Diseñar base de datos", "estado": "En Progreso"},
+    {"titulo": "Revisar documentación", "estado": "Completada"},
+    {"titulo": "Probar API", "estado": "Pendiente"},
+    {"titulo": "Subir proyecto", "estado": "Completada"},
+]
+
+
+# ---------- Función para contar tareas por estado ----------
+def contar_tareas_por_estado(tareas):
+    contadores = {}
+    for tarea in tareas:
+        estado = tarea["estado"]
+        if estado in contadores:
+            contadores[estado] += 1
+        else:
+            contadores[estado] = 1
+    return contadores
+
+
+# ---------- Componentes del tablero ----------
+def columna_tareas(nombre_columna, tareas):
+    """Muestra las tareas que pertenecen a un estado específico."""
+    tareas_columna = [t for t in tareas if t["estado"] == nombre_columna]
+    return rx.box(
+        rx.text(nombre_columna, font_weight="bold", font_size="18px"),
+        rx.vstack(
+            *[rx.box(t["titulo"], padding="8px", background_color="#e0e0e0", border_radius="8px") for t in tareas_columna],
+            spacing="4",
+            width="250px",
+        ),
+        padding="10px",
+        border="1px solid #ccc",
+        border_radius="10px",
+        background_color="#fafafa",
+    )
+
+
+# ---------- Página principal ----------
+def index():
+    contadores = contar_tareas_por_estado(todas_las_tareas)
+    return rx.center(
+        rx.vstack(
+            rx.heading("🗂️ Tablero Kanban con Contadores", font_size="24px"),
+            rx.hstack(
+                columna_tareas("Pendiente", todas_las_tareas),
+                columna_tareas("En Progreso", todas_las_tareas),
+                columna_tareas("Completada", todas_las_tareas),
+                spacing="6",
+            ),
+            rx.divider(margin_y="10px"),
+            rx.box(
+                rx.text(f"Pendientes: {contadores.get('Pendiente', 0)}"),
+                rx.text(f"En Progreso: {contadores.get('En Progreso', 0)}"),
+                rx.text(f"Completadas: {contadores.get('Completada', 0)}"),
+                background_color="#f5f5f5",
+                padding="12px",
+                border_radius="10px",
+                box_shadow="md",
+                width="300px",
+            ),
+            spacing="5",
+        )
+    )
+
+
+# ---------- Configuración de la app ----------
+app = rx.App()
+app.add_page(index)
+
+
+
